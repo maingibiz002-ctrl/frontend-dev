@@ -1,1 +1,9 @@
 The key thing here is we need to idenify and design what we are building, for instance if its like a porifolio website we need to lay out the full structure before we build anything
+
+****************************CANVA***********************************
+- We need first to identify the color codes or palletes required for this project for instance our first project will be our portifolio and the color palletes are as follows
+                          #F04D07 — Vivid Orange / Blaze Orange (a bright, fiery red-orange)
+                          #1F1B1E — Jet Black / Charcoal Black (an off-black with a subtle warm undertone)
+                          #989999 — Cool Gray / Concrete Gray (a balanced mid-tone neutral gray)
+                          #891A06 — Rust Red / Deep Maroon (a dark, earthy burnt red-brown)   
+This works really cleanly for a dark-mode portfolio: #1F1B1E as your main background, #989999 for secondary text or borders, #F04D07 for primary buttons and active highlights, and #891A06 for hover states or subtle card accents
