@@ -1,1 +1,59 @@
-Here we will learn how do design web templates using html
+Here we will learn how do design web templates using html and css to create the frontend of a website
+ ******* ******  ************HTML* ****** ****** ******
+                HEAD
+-how do we create the document shell for html?
+! (an exclamation mark) and press Tab or Enter
+
+(or type html:5 and press Tab / Enter)
+
+-how do we link css to this html?
+Inside your <head> section (right below <title>), type a <link> tag with two attributes:
+
+rel="stylesheet" — tells the browser that this linked file is a stylesheet (not an icon or font).
+
+href="styles.css" — gives the relative path to your CSS file in the same folder as index.html.
+
+shorthand just type link and press enter. 
+
+
+
+TASK 1
+practice this by;
+               -create a file named index.html
+               -on the file generate the document shell by typing the exclamation mark
+               -on the head section type link  to add the css link 
+bravo!!!!!! now you are ready to build that website
+
+bonus; the text on the the title attribute is the text that will be visible beside the favicon
+
+           BODY
+Think of <body> as the visible stage of your page. Before filling in details, we lay out the three big structural zones so your document has a clear spine:
+
+<header> — Top area for your brand/name and navigation.
+
+<main> — The centerpiece of the page where your portfolio sections live.
+
+<footer> — Bottom area for contact info and closing links.
+
+TASK 2
+here just type
+   -header and press enter
+    -main and press enter
+     -footer and press enter and now you have the place we will start off with each section
+
+
+header
+
+
+
+
+
+
+
+
+
+
+
+
+
+
