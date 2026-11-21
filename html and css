@@ -42,14 +42,104 @@ here just type
      -footer and press enter and now you have the place we will start off with each section
 
 
-header
+HEADER
+this comprises of name or brand and a series of navigation links.
+
+Inside <header>, we put a <nav> (navigation) landmark. Inside <nav>, there are two distinct sides:
+
+-Your Brand / Logo Link (Left Side): An <a> tag with href="#" (which scrolls to the top of the page) containing your name or brand mark.
+
+-Your Navigation Links (Right Side): An unordered list (<ul>) containing list items (<li>), each holding an anchor link (<a>) that points to an id on your page—such as #projects, #about, and #contact.
+          The two core list types in HTML are:
+
+                  -Unordered List (<ul>): Used when the order of items does not matter (such as navigation links—Projects, About, Contact aren't a numbered countdown or step sequence). By default, browsers show bullet points (•) and add some left indentation.
+
+                   -Ordered List (<ol>): Used when the sequence or order matters (such as step-by-step instructions or ranked steps). By default, browsers number the items (1., 2., 3.).
+
+Inside either <ul> or <ol>, each individual item lives inside a list item (<li>) tag. A <ul> or <ol> should directly contain <li> elements, while the actual text or link (<a>) goes inside each <li>.
+
+TASK 3
+-inside the header tags type nav and press enter/tab you get the navigation tags
+-inside the nav tags type a and then press tab to get a link tag, type # inside the quotes and your name/brand between the tags.
+-Create an unordered list (<ul>) right after your brand/name <a> link.
+
+-Put 3 list items (<li>) inside that <ul>—one for each section jump: #projects, #about, and #contact.
+
+-Inside each <li>, place an <a> tag with href set to #projects, #about, and #contact, and give each link clear, short text (for example, Projects, About, Contact).
+
+
+BONUS: the emmert shortcut for;
+       -ordered list, ol>li*number of items in that list
+        -unordered list, ul>li*3
+
+BRAVO!!!! YOU ARE DONE WITH THE HTML FOR THE HEADER
+
+
+CSS FOR THE HEADER.
+Every clean stylesheet starts with two foundational pieces:
+
+The Universal Reset (*): Browsers add invisible default margin and padding around elements (like <body> and <ul>), 
+and calculate widths awkwardly by default. Resetting margin: 0; padding: 0; box-sizing: border-box; gives you a
+predictable blank canvas where padding doesn't unexpectedly inflate element widths.
+
+CSS Custom Properties (Variables) in :root: Instead of typing hex codes (#F04D07, #000000, #989999, #891A06)
+repeatedly across dozens of rules, define them once inside :root (for example, --color-bg: #000000; and --color-accent: #F04D07;) 
+and reuse them anywhere via var(--color-accent).
+
+TASK 4
+-Having created a style.css file and linked it up with the html, we now begin with the foundation pieces
+-set up the universal reset, Right after typing * in styles.css, you open curly braces { } and put your reset properties inside them
+                     ie-margin: 0; — Removes all default outer spacing that browsers automatically add (such as the thin gap around <body> or the space above/below <ul> and <h1>).
+
+                       -padding: 0; — Strips all default inner spacing (such as the left indentation browsers put on <ul> so bullet points fit).
+
+                        -box-sizing: border-box; — Changes how widths and heights are calculated so that padding and border stay inside an element's declared width/height instead of pushing the box bigger.
+-set up custom properties, define yuor four color palette variables
+          the format for this is two hyphen and then thw variable name
+                ie --black: #00000
+                    --orange and so on.
+-set up the base propertie of the body
+    Right underneath :root, set up body so the page uses your black background, white default text, and the default fonts
+          -background-color: var(custom variable name);
+           -color: var(variable name);
+            -font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+
+LAYOUT OF THE HEADER
+Right now, <nav> contains two direct children:
+
+Your brand link (Evans Maingi)
+
+Your unordered list (<ul>) containing projects, about, and contact
+
+When you set display: flex; on <nav>, those two children become flex items sitting side by side on a single horizontal row instead of stacking vertically. Two alignment properties do the heavy lifting:
+
+justify-content: space-between; — Pushes the first item (Evans Maingi) to the far left and the second item (<ul>) to the far right.
+
+align-items: center; — Centers both items vertically along the same horizontal line so nothing looks lopsided.
+
+Then, setting display: flex; on nav ul turns the three <li> elements inside it into a horizontal row too, while gap: 2rem; gives clean breathing room between each link without messy margin hacks.
 
 
 
+CSS SELECTORS
+A CSS selector is the pattern at the start of a rule that tells the browser which HTML elements on the page should receive those styles.
 
+-Universal selector (*): Matches every element on the page. Best kept minimal—like your margin: 0; padding: 0; box-sizing: border-box; reset—so you don't accidentally force styles onto things that shouldn't have them.
 
+-Type / element selector (body, ul, a): Targets every HTML tag of that name. Great for setting broad base rules (like body background and font), though a bare a rule will affect every link on the page unless narrowed down.
 
+-Class selector (.nav-link, .btn): Targets elements that have a matching class="..." attribute in HTML (prefixed with a dot .). Reusable across multiple elements and ideal for components like buttons, cards, or special links.
 
+-ID selector (#hero, #projects): Targets a single unique element with a matching id="..." attribute in HTML (prefixed with a hash #). Because an id should only appear once per page, it has high specificity—usually best reserved for major page anchors/sections rather than repeating UI styles.
+
+-Pseudo-class selector (:root, :hover, :focus): Targets an element in a special state or context rather than a plain tag name—such as :root for the top-level document root or :hover when the pointer rests over a link.
+
+-Descendant combinator (header nav): A space between selectors matches nav anywhere inside header (whether directly inside it or nested deeper).
+
+-Child combinator (header > nav): A > matches nav only if it is a direct child immediately inside header, not nested inside a wrapper element in between.
+
+-Adjacent / general sibling (h1 + p or h1 ~ p): Matches elements that sit after another element sharing the same parent (+ for immediately next, ~ for any following sibling).
 
 
 
